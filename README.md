@@ -14,7 +14,7 @@ Por mais que pareça simples, fazer isso de forma que se adapte aos mais diverso
 - Tailwind CSS - Estilização
 - Animate CSS - Animação (opcional)
 
-*Se desejar utilizar somente a estilização do componente, fique a vontade para copiar a parte do HTML/CSS, que inclusive, já vou deixar separadinho [aqui](https://gist.github.com/Karytonn/badd57bfdc472a221f4d714cf01bebe7).*
+*Se desejar utilizar somente a estilização do componente, fique a vontade para copiar a parte do HTML/CSS, que inclusive, já vou deixar separadinho [aqui](https://github.com/Karytonn/nuxtjs-whatsapp-card/blob/main/whatsapp.html).*
 
 ## Mão na massa!
 
@@ -150,7 +150,7 @@ export default Vue.extend({
 
 **Sim, isso é tudo! Seu componente de integração com o WhatsApp está pronto para uso.**
 
-[**Vou deixar aqui o código completo**](https://gist.github.com/Karytonn/86ad00b8a1f95a17f56bc5f0cceaff87) e você pode simplesmente copiar e colar fazendo as devidas adequações.
+[**Vou deixar aqui o código completo**](https://github.com/Karytonn/nuxtjs-whatsapp-card/blob/main/WhatsAppCTA.vue) e você pode simplesmente copiar e colar fazendo as devidas adequações.
 
 Quer ver uma demostração, [**esse é o site de um cliente real**](https://www.procopioeoliveira.com.br/) onde implementamos esta funcionalidade.
 
