@@ -1,0 +1,82 @@
+<template>
+    <div class="fixed right-6 bottom-6">
+      
+      <transition 
+        enter-active-class="animate__animated animate__fadeInRight"
+        mode="out-in"
+      >
+        <!-- CARD TO SEND MESSAGE -->
+        <div v-if="isOpen">
+          <div class="w-96 max-w-[90vw] rounded-3xl overflow-hidden shadow-2xl shadow-[#075E54]/50 bg-[#E7E7E7]">
+            
+            <!-- Header and close button -->
+            <div class="h-20 p-5 flex items-center justify-between gap-4 bg-[#25D366]">
+              <div class="flex items-center gap-3">
+                <img class="w-7 h-28" src="@/assets/icon/header/whatsapp.svg" alt="WP">
+                <p class="text-lg font-medium text-white">WhatsApp</p>
+              </div>
+              <button @click="isOpen = false" class="hover:rotate-12 hover:scale-110" title="Fechar">
+                <img src="@/assets/icon/close.svg" alt="Fechar" class="w-8 h-8">
+              </button>
+            </div>
+  
+            <!-- Message input -->
+            <div class="p-4 py-6">
+              <input type="text" name="message" id="message" v-model="form.message" maxlength="140" title="Mensagem"
+                class="w-full px-4 py-4 rounded-full text-sm border-none text-[#075E54]">
+            </div>
+  
+            <!-- Send button -->
+            <div class="w-full p-4 flex justify-end">
+              <button @click="goToWhatsAppChat" id="send-whatsapp-message" title="Enviar mensagem"
+                class="px-5 py-2 rounded-full flex items-center justify-between gap-1 bg-[#25D366] hover:scale-105 hover:shadow-lg hover:shadow-[#075E54]/30 transition-all duration-300">
+                <p class="font-medium text-white">Abrir Conversa</p>
+                <img src="@/assets/icon/send.svg" alt="Enviar">
+              </button>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- BUTTON TO OPEN SEND MESSAGE CARD -->
+        <button v-else @click="openWhatsAppCard" id="open-whatsapp-card" 
+          class="w-16 h-16 rounded-full grid place-content-center hover:scale-105 transition-all duration-300 bg-[#25D366] shadow-xl shadow-[#075E54]/20" title="WhatsApp">
+          <img src="@/assets/icon/header/whatsapp.svg" alt="WhatsApp" class="w-8 h-8">
+        </button>
+      </transition>
+  
+      
+    </div>
+  </template>
+  
+  <script lang="ts">
+  import Vue from 'vue';
+  export default Vue.extend({
+    data() {
+      return {
+        isOpen: false,
+        form: {
+          message: "Falar com nossa equipe agora!",
+          number: '5562988887777'
+        }
+      }
+    },
+    methods: {
+      openWhatsAppCard() {
+        this.form.message = "Falar com nossa equipe agora!"
+        this.isOpen = true
+        // ... Dispare qualquer outra coisa aqui
+      },
+      goToWhatsAppChat() {
+        this.isOpen = false;
+        let message = (this.form.message === "Falar com nossa equipe agora!")? " " : this.form.message;
+        window.open(`https://api.whatsapp.com/send?phone=${this.form.number}&text=${message}`, '_blank')
+        this.form.message = "Falar com nossa equipe agora!"
+        // ... Dispare qualquer outra coisa aqui
+      }
+    }
+  });
+  </script>
+  
+  <style scoped>
+  </style>
