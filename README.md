@@ -1,6 +1,6 @@
 # Nuxt JS - WhatsApp Card
 
-![@karytonn.dev](https://media-exp1.licdn.com/dms/image/D4D12AQE8EfAx1Ra6Sg/article-cover_image-shrink_720_1280/0/1669902162582?e=1675296000&v=beta&t=PSm-62l2pUqMfOTNjMsarXh66Y0nnIUxoUzZ0yizU88 "@karytonn.dev")
+![@karytonn.dev](https://raw.githubusercontent.com/Karytonn/nuxtjs-whatsapp-card/main/cover.jpg "@karytonn.dev")
 
 Seja para conversão do **GoogleADS** ou simplesmente fornecer um meio de contato rápido para clientes, ter um botão de **WhatsApp** integrado ao site é indispensável nos dias de hoje.
 
